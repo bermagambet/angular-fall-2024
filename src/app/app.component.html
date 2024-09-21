@@ -1,8 +1,12 @@
 <div>
-
   <input [(ngModel)]="login" placeholder="login" />
   <input [(ngModel)]="password" placeholder="password" />
   <button (click)="doLogin()">Login</button>
+  <ng-template ngIf="isAuthorized">
+    <div>
+      <app-logg-out [login]="login" [doLogOut]="doLogOut" />
+    </div>
+  </ng-template>
   <div *ngIf="isAuthorized">
     <app-logg-out [login]="login" [doLogOut]="doLogOut" />
   </div>

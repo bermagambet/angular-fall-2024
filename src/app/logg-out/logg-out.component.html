@@ -1,4 +1,7 @@
 <div>
-    <p>Logged in as {{ login }}</p>
+    <!-- <input (change)="handleInputChange($event)" />
+    <p [ngStyle]="pStyle">Logged in as {{ login }}</p> -->
+    <button (click)="handleButtonClick($event)">Change classname to red</button>
+    <p [ngClass]="isClassRed ? 'red' : 'green'">Logged in as {{ login }}</p>
     <button (click)="doLogOut()">Log out</button>
 </div>

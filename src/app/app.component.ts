@@ -17,13 +17,12 @@ export class AppComponent {
 
   isAuthorized: boolean = false;
 
-  doLogOut = () => {  // this -> declaration
+  doLogOut = () => {
     this.isAuthorized = false
   }
 
   doLogin = () => {
-    console.log(this.login, this.password)
-    if(this.password.length >= 8 && this.login.length <= 10 && this.password.includes('1')) {
+     if(this.password.length >= 8 && this.login.length <= 10 && this.password.includes('1')) {
       this.isAuthorized = true;
     } 
   } 
