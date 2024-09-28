@@ -19,7 +19,7 @@ export class HighlightDirective {
   }
 
   @HostListener('click') onClick = () => {
-    this.el.x.style.color = this.appHighlight
+    this.el.nativeElement.style.color = this.appHighlight
   }
 
   // class constructor -> el -> element reference -> element in DOM itself
