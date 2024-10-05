@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { HighlightDirective } from '../highlight.directive';
 import { CommonModule } from '@angular/common'; // ngModule, ngClass, ngStyle
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
@@ -20,6 +20,7 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 // string | null => string or null 
 
 export class LoggOutComponent implements OnInit  {
+
   smth: string | null = "0"; 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
