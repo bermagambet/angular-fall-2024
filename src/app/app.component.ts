@@ -2,28 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { LoggOutComponent } from './logg-out/logg-out.component';
+import { EmitterTestComponent } from './emitter-test/emitter-test.component';
 
 @Component({
   selector: 'app-root', // use as html tag for render
   standalone: true,
-  imports: [RouterOutlet, RouterLink, FormsModule, CommonModule, LoggOutComponent],
+  imports: [RouterOutlet, RouterLink, FormsModule, CommonModule, EmitterTestComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  login: string = '';
-  password: string = '';
+  myProperty = '1'
 
-  isAuthorized: boolean = false;
-
-  doLogOut = () => {
-    this.isAuthorized = false
+  checkIfSomeoneClickedButtonInChild = () => {
+    console.log('clicked in parent')
   }
-
-  doLogin = () => {
-     if(this.password.length >= 8 && this.login.length <= 10 && this.password.includes('1')) {
-      this.isAuthorized = true;
-    } 
-  } 
 }

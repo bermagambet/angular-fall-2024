@@ -21,6 +21,11 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 
 export class LoggOutComponent implements OnInit  {
 
+  // We can create our own event
+  @Output()
+  clickCustom: EventEmitter<any> = new EventEmitter();
+  
+
   smth: string | null = "0"; 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
